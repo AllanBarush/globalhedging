@@ -1,139 +1,358 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Global Hedging, Institutional Risk &amp; Tactical Trading in Futures &amp; Options | RiskMathics</title>
-<meta name="description" content="Coberturas, riesgo institucional y trading tactico en futuros y opciones. 8 clases, 16 horas, Virtual Live por Zoom de 18:00 a 20:00 hora de la Ciudad de Mexico. Inicia 1 de septiembre de 2026. MXN $25,000 + TAX. Otorga 29 HECSE del Colegio Nacional de Actuarios. Imparte Juan Pedro Luengas Garcia. RiskMathics Financial Institute.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<meta name="description" content="Coberturas, riesgo institucional y trading tactico en futuros y opciones. 8 clases, 16 horas, Virtual Live por Zoom de 18:00 a 20:00 hora de la Ciudad de Mexico. Inicia 1 de septiembre de 2026. MXN $25,000 + TAX. Otorga 29 HECSE del Colegio Nacional de Actuarios. Imparte Juan Pedro Luengas Garcia.">
+<link rel="canonical" href="https://globalhedging.riskmathicslabs.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Global Hedging, Institutional Risk &amp; Tactical Trading in Futures &amp; Options">
+<meta property="og:description" content="De la cobertura corporativa al trading institucional. 8 clases, 16 horas. Inicia 1 de septiembre de 2026.">
+<meta property="og:url" content="https://globalhedging.riskmathicslabs.com/">
+<meta property="og:image" content="https://globalhedging.riskmathicslabs.com/rm-logo.png">
+<link rel="icon" href="rm-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#101820;--bg2:#000000;--ink:#EAE4DA;--soft:#A79E8F;--acc:#C9A96A;--deep:#7A5C2E;--title:#F8F4EC;--card:#1e262e;--rule:rgba(201,169,106,0.16);--glow:rgba(122,92,46,0.33)}
-*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
-body{background:var(--bg2);color:var(--ink);font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.75}
-h1,h2,h3{font-family:'Poppins',Arial,sans-serif}
-.wrap{max-width:960px;margin:0 auto;padding:0 24px}
-.kicker{font-family:'Poppins',Arial,sans-serif;font-size:11px;letter-spacing:3.2px;text-transform:uppercase;color:var(--acc);font-weight:600}
-.hero{min-height:72vh;display:flex;flex-direction:column;justify-content:center;padding:96px 24px 72px;text-align:center;background:radial-gradient(1000px 560px at 50% 28%,rgba(122,92,46,0.33),transparent),linear-gradient(165deg,#101820,#000000)}
-.hero .serie{font-family:'Poppins',Arial,sans-serif;font-size:11.5px;letter-spacing:4.5px;text-transform:uppercase;color:var(--acc);font-weight:600}
-.hero h1{font-size:clamp(30px,5.6vw,58px);font-weight:800;color:var(--title);line-height:1.06;letter-spacing:-.5px;margin:20px auto 0;max-width:20ch}
-.hero .subt{font-family:'Poppins',Arial,sans-serif;font-size:clamp(14px,2vw,19px);color:var(--acc);margin-top:13px;font-weight:500}
-.hero .aud{font-style:italic;color:var(--soft);font-size:14.5px;margin-top:10px}
-.hero .rule{width:64px;height:2px;background:var(--acc);margin:24px auto 0}
-.chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin:28px auto 0}
-.chip{font-family:'Poppins',Arial,sans-serif;font-size:11.5px;letter-spacing:1px;text-transform:uppercase;border:1px solid var(--rule);background:rgba(255,255,255,.04);color:var(--ink);padding:8px 15px;border-radius:30px;font-weight:600}
-.hero-ctas{display:flex;gap:13px;justify-content:center;margin-top:30px;flex-wrap:wrap}
-.btn{font-family:'Poppins',Arial,sans-serif;font-size:12.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;padding:15px 32px;border-radius:4px;display:inline-block}
-.btn-primary{background:var(--deep);color:#FFFFFF}.btn-primary:hover{background:var(--acc);color:#140306}
-.btn-ghost{border:1.5px solid rgba(255,255,255,.3);color:var(--ink)}.btn-ghost:hover{background:rgba(255,255,255,.06)}
-.sec{padding:66px 0;border-top:1px solid var(--rule)}
-.sec-title{font-size:clamp(24px,3.2vw,34px);font-weight:800;color:var(--title);line-height:1.15;margin:12px 0 8px}
-.sec-sub{font-style:italic;color:var(--soft);font-size:17px;max-width:740px}
-ol.temas{list-style:none;margin-top:28px;counter-reset:tema}
-ol.temas>li{padding:17px 0 17px 52px;position:relative;border-bottom:1px solid var(--rule);font-size:16px;counter-increment:tema}
-ol.temas>li::before{content:counter(tema,decimal-leading-zero);position:absolute;left:0;top:19px;font-family:'Poppins',Arial,sans-serif;font-weight:700;font-size:15px;color:var(--acc)}
-ol.temas b{color:var(--title);font-family:'Poppins',Arial,sans-serif;font-weight:600;font-size:15.5px}
-ul.sub{list-style:none;margin-top:10px}
-ul.sub li{padding:6px 0 6px 22px;position:relative;font-size:15px;color:var(--ink)}
-ul.sub li::before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;background:var(--acc);border-radius:50%}
-.parte{margin-top:34px;border:1px solid var(--rule);background:var(--card);padding:30px 32px}
-.parte .pt{font-family:'Poppins',Arial,sans-serif;font-weight:700;color:var(--title);font-size:18px}
-.parte .pm{font-family:'Poppins',Arial,sans-serif;font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--acc);margin-top:6px;font-weight:600}
-.quote{font-family:'Lora',Georgia,serif;font-style:italic;font-size:clamp(20px,3vw,28px);color:var(--title);text-align:center;max-width:620px;margin:0 auto;line-height:1.4}
-.quote small{display:block;font-style:normal;font-family:'Poppins',Arial,sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--acc);margin-top:16px}
-.fac{display:grid;grid-template-columns:1fr;gap:22px;margin-top:30px}
-.fc{border:1px solid var(--rule);background:var(--card);padding:28px 30px}
-.fc .fn{font-family:'Poppins',Arial,sans-serif;font-weight:700;color:var(--title);font-size:18px}
-.fc .fr{font-family:'Poppins',Arial,sans-serif;font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--acc);margin:6px 0 12px;font-weight:600}
-.fc p{font-size:15px;color:var(--ink)}
-.fechas{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-.fd{font-family:'Poppins',Arial,sans-serif;border:1px solid var(--rule);background:var(--card);padding:14px 20px;text-align:center;min-width:96px}
-.fd .d{font-size:20px;font-weight:800;color:var(--acc)}
-.fd .m{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--soft);margin-top:4px}
-.ficha{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:30px}
-.f{background:var(--card);padding:22px 14px;text-align:center}
-.f .n{font-family:'Poppins',Arial,sans-serif;font-size:19px;font-weight:800;color:var(--acc)}
-.f .l{font-family:'Poppins',Arial,sans-serif;font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--soft);margin-top:7px}
-@media(max-width:700px){.ficha{grid-template-columns:repeat(2,1fr)}}
-footer{background:var(--bg2);color:var(--soft);padding:36px 24px;text-align:center;font-family:'Poppins',Arial,sans-serif;font-size:12px;line-height:2;border-top:1px solid var(--rule)}
-footer a{color:var(--acc);text-decoration:none}
-.tgl{font-family:'Lora',Georgia,serif;font-style:italic;color:var(--acc);font-size:15.5px;margin-top:12px}
-ol.temas .tg{display:block;font-family:'Lora',Georgia,serif;font-style:italic;color:var(--acc);font-size:14px;margin-top:9px}
-.abs p{font-size:16.5px;margin-top:18px;color:var(--ink)}.abs p b{color:var(--title)}
-.hl{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}.hl .h{border:1px solid var(--rule);background:var(--card);padding:18px 20px}.hl .h b{font-family:'Poppins',Arial,sans-serif;color:var(--acc);font-weight:700;font-size:13px;display:block;margin-bottom:6px}.hl .h span{font-size:14.5px;color:var(--ink)}@media(max-width:700px){.hl{grid-template-columns:1fr}}
-ul.dir{list-style:none;margin-top:24px}ul.dir li{padding:10px 0 10px 26px;position:relative;font-size:15.5px;border-bottom:1px solid var(--rule)}ul.dir li::before{content:"";position:absolute;left:2px;top:19px;width:8px;height:8px;background:var(--acc);border-radius:50%}
-</style></head><body>
-<header class="hero">
- <div class="serie">Private Wealth Management · Executive Program</div>
- <h1>Global Hedging, Institutional Risk &amp; Tactical Trading in Futures &amp; Options</h1>
- <div class="subt">De la cobertura corporativa al trading institucional: futuros, forwards, swaps y opciones aplicados a tasas, divisas y commodities</div>
- <div class="aud">Tesorerias, CFOs, areas de riesgo y finanzas, instituciones financieras, asset managers, fondos de pension, aseguradoras, y operadores que quieren profesionalizar su uso de derivados</div>
- <div class="rule"></div>
- <div class="chips">
-   <span class="chip">8 clases &middot; 16 horas</span>
-   <span class="chip">Inicia 1 de septiembre de 2026</span>
-   <span class="chip">Virtual Live por Zoom &middot; 18:00 a 20:00 hora de la Ciudad de Mexico</span>
-   <span class="chip">MXN $25,000 + TAX</span>
-   <span class="chip">29 HECSE &middot; Colegio Nacional de Actuarios</span>
-  </div>
- <div class="hero-ctas"><a class="btn btn-primary" href="#rm-enroll">Inscr&iacute;bete</a><a class="btn btn-ghost" href="#temario">Ver temario</a></div>
-</header>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+ --bg:#040E0C; --bg2:#0A1E19; --bg3:#08261E; --rule:#12352B;
+ --acc:#32D2A0; --acc2:#5FE0BA;
+ --ink:#FFFFFF; --sub:#AADCC8; --dim:#8FB5A6; --faint:#5E8577;
+ --sp:clamp(66px,8.6vw,146px); --pad:clamp(20px,5vw,64px); --max:1180px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:'Lora',Georgia,serif;
+ font-size:clamp(15.5px,1.05vw,17.5px);line-height:1.78;-webkit-font-smoothing:antialiased;
+ overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Poppins',Arial,sans-serif;font-weight:700;line-height:1.1}
+a{color:inherit}img{max-width:100%;display:block}
+.w{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+section{padding:var(--sp) 0;position:relative}
+.alt{background:var(--bg2)}
+/* etiqueta de categoria: Poppins Light, mayusculas, tracking amplio */
+.eye{font-family:'Poppins',Arial,sans-serif;font-size:11px;font-weight:300;letter-spacing:4.6px;
+ text-transform:uppercase;color:var(--acc);display:block;margin-bottom:24px}
+/* la regla de acento: 50px, 2px, exacta */
+.line{width:50px;height:2px;background:var(--acc);border:0;margin:26px 0}
+.line.mid{margin-left:auto;margin-right:auto}
+h2{font-family:'Poppins',Arial,sans-serif;font-weight:700;text-transform:uppercase;
+ font-size:clamp(23px,3.1vw,40px);letter-spacing:3px;line-height:1.16;max-width:20ch}
+.lede{font-family:'Lora',Georgia,serif;font-style:italic;font-size:clamp(17px,1.5vw,22px);
+ color:var(--sub);max-width:52ch;line-height:1.62;margin-top:22px}
+p+p{margin-top:19px}
+.body p{color:var(--dim);max-width:64ch}
+.body b{color:var(--ink);font-weight:600}
+/* ---------- encabezado ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:60;padding:16px 0;
+ border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
+header.on{background:rgba(4,14,12,.94);backdrop-filter:blur(14px);border-bottom-color:var(--rule)}
+.hd{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.hd img{height:30px;width:auto}
+nav{display:flex;gap:26px;align-items:center}
+nav a{font-family:'Poppins',Arial,sans-serif;font-size:10.5px;font-weight:300;letter-spacing:2.4px;
+ text-transform:uppercase;text-decoration:none;color:var(--dim);transition:color .2s}
+nav a:hover{color:var(--ink)}
+nav a.cta{color:var(--bg);background:var(--acc);padding:11px 20px;font-weight:500;letter-spacing:1.8px}
+nav a.cta:hover{background:var(--acc2);color:var(--bg)}
+@media(max-width:900px){nav a:not(.cta){display:none}}
+/* ---------- hero: pila vertical centrada, Jony Ive ---------- */
+#hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+ text-align:center;padding-top:clamp(92px,12vh,116px);padding-bottom:clamp(26px,4vh,44px);
+ overflow:hidden}
+#hero:before{content:"";position:absolute;inset:0;pointer-events:none;
+ background:
+  radial-gradient(46% 40% at 72% 22%,rgba(20,130,100,.30),transparent 70%),
+  radial-gradient(38% 34% at 16% 84%,rgba(15,90,70,.26),transparent 72%),
+  radial-gradient(24% 20% at 50% 48%,rgba(50,210,160,.07),transparent 70%),
+  linear-gradient(137deg,#040E0C 0%,#0A1E19 52%,#08261E 100%)}
+/* grano de pelicula, sin imagen externa */
+#hero:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.05;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/></filter><rect width='140' height='140' filter='url(%23n)' opacity='.55'/></svg>")}
+#hero .w{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
+.cat{font-family:'Poppins',Arial,sans-serif;font-size:clamp(11px,1.05vw,13px);font-weight:300;
+ letter-spacing:5px;text-transform:uppercase;color:var(--acc);margin-bottom:22px}
+h1{font-family:'Poppins',Arial,sans-serif;font-weight:700;text-transform:uppercase;
+ font-size:clamp(30px,min(6.6vw,8.4vh),82px);line-height:1.02;letter-spacing:.055em;
+ max-width:16ch}
+h1 .a{color:var(--acc);display:block}
+h1 .b{color:var(--ink);display:block}
+.edic{font-family:'Poppins',Arial,sans-serif;font-size:clamp(12px,1.15vw,15px);font-weight:300;
+ letter-spacing:4.2px;text-transform:uppercase;color:var(--sub);margin-top:18px}
+.tag{font-family:'Lora',Georgia,serif;font-style:italic;font-size:clamp(17px,1.65vw,25px);
+ color:var(--sub);max-width:34ch;line-height:1.5;margin-top:4px}
+.meta{font-family:'Poppins',Arial,sans-serif;font-size:clamp(12px,1.05vw,15px);font-weight:300;
+ letter-spacing:3.4px;text-transform:uppercase;color:var(--acc);margin-top:clamp(24px,3.4vh,34px)}
+.meta i{font-style:normal;color:var(--faint)}
+.rail{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);
+ border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+ margin-top:clamp(24px,4.2vh,56px);width:100%}
+.rail div{background:var(--bg);padding:clamp(13px,2.1vh,19px) 14px}
+.rail span{display:block;font-family:'Poppins',Arial,sans-serif;font-size:9.5px;font-weight:300;
+ letter-spacing:2.6px;text-transform:uppercase;color:var(--faint);margin-bottom:7px}
+.rail b{font-family:'Poppins',Arial,sans-serif;font-size:clamp(12.5px,1.1vw,15px);font-weight:500;
+ color:var(--ink);letter-spacing:.4px;line-height:1.3;display:block}
+@media(max-width:820px){.rail{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .rail div:last-child:nth-child(odd){grid-column:1 / -1}}
+/* ---------- el gesto: A y B, las dos mitades del curso ---------- */
+.parte{display:grid;grid-template-columns:minmax(0,.34fr) minmax(0,1fr);
+ gap:clamp(24px,4vw,66px);align-items:start;padding:clamp(34px,4.4vw,58px) 0;
+ border-top:1px solid var(--rule)}
+.parte .letra{font-family:'Poppins',Arial,sans-serif;font-weight:800;
+ font-size:clamp(84px,13vw,190px);line-height:.8;letter-spacing:-.04em;
+ color:transparent;-webkit-text-stroke:1.5px var(--acc);position:sticky;top:104px}
+.parte h3{font-family:'Poppins',Arial,sans-serif;font-weight:600;text-transform:uppercase;
+ font-size:clamp(15px,1.5vw,20px);letter-spacing:2.6px;color:var(--ink);line-height:1.3;
+ margin-bottom:18px}
+.parte p{color:var(--dim);max-width:56ch}
+@media(max-width:820px){.parte{grid-template-columns:1fr;gap:8px}
+ .parte .letra{position:static;font-size:72px}}
+/* ---------- temario ---------- */
+.clases{border-top:1px solid var(--rule)}
+.cl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(20px,3vw,44px);
+ padding:clamp(24px,2.8vw,36px) 0;border-bottom:1px solid var(--rule);align-items:start}
+.cl .n{font-family:'Poppins',Arial,sans-serif;font-weight:300;font-size:clamp(13px,1.2vw,16px);
+ letter-spacing:3px;color:var(--acc);padding-top:4px;min-width:74px}
+.cl h4{font-family:'Poppins',Arial,sans-serif;font-weight:600;font-size:clamp(15.5px,1.45vw,19px);
+ letter-spacing:.2px;color:var(--ink);margin-bottom:11px;line-height:1.32}
+.cl p{font-size:15px;color:var(--dim);line-height:1.68;max-width:62ch}
+.cl .f{font-family:'Poppins',Arial,sans-serif;font-size:10.5px;font-weight:300;letter-spacing:2.4px;
+ text-transform:uppercase;color:var(--faint);margin-top:10px;display:block}
+@media(max-width:640px){.cl{grid-template-columns:1fr;gap:8px}}
+/* ---------- listas ---------- */
+.dos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule);
+ border:1px solid var(--rule);margin-top:clamp(34px,4.2vw,54px)}
+.dos li{background:var(--bg);padding:17px 22px;list-style:none;font-size:15px;color:var(--dim);
+ line-height:1.6}
+.alt .dos li{background:var(--bg2)}
+.dos li:last-child:nth-child(odd){grid-column:1 / -1}
+@media(max-width:620px){.dos{grid-template-columns:1fr}}
+/* ---------- faculty ---------- */
+.fac{margin-top:clamp(34px,4.2vw,54px);border-top:1px solid var(--rule);padding-top:34px}
+.fac .fn{font-family:'Poppins',Arial,sans-serif;font-weight:600;font-size:clamp(18px,1.8vw,24px);
+ letter-spacing:.2px;color:var(--ink)}
+.fac .fr{font-family:'Poppins',Arial,sans-serif;font-weight:300;font-size:12px;letter-spacing:2.6px;
+ text-transform:uppercase;color:var(--acc);margin:9px 0 20px}
+.fac p{color:var(--dim);max-width:64ch}
+/* ---------- ficha ---------- */
+.ficha{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);
+ border:1px solid var(--rule);margin-top:clamp(34px,4.2vw,54px)}
+.ficha div{background:var(--bg);padding:24px 20px 26px;text-align:center}
+.alt .ficha div{background:var(--bg2)}
+.ficha .n{font-family:'Poppins',Arial,sans-serif;font-weight:600;font-size:clamp(17px,1.9vw,25px);
+ color:var(--acc);letter-spacing:.4px;line-height:1.2}
+.ficha .l{font-family:'Poppins',Arial,sans-serif;font-weight:300;font-size:9.5px;letter-spacing:2.6px;
+ text-transform:uppercase;color:var(--faint);margin-top:9px}
+@media(max-width:700px){.ficha{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* ---------- sello HECSE ---------- */
+.sello{border:1px solid var(--rule);padding:clamp(24px,3vw,36px);margin-top:34px;text-align:center}
+.sello .n{font-family:'Poppins',Arial,sans-serif;font-weight:700;font-size:clamp(38px,5vw,64px);
+ color:var(--acc);letter-spacing:-.02em;line-height:1}
+.sello .l{font-family:'Poppins',Arial,sans-serif;font-weight:300;font-size:11px;letter-spacing:3.4px;
+ text-transform:uppercase;color:var(--sub);margin-top:12px}
+.sello p{font-size:14px;color:var(--faint);margin-top:14px;max-width:56ch;margin-left:auto;margin-right:auto}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+::selection{background:var(--acc);color:var(--bg)}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+</style>
+</head>
+<body>
+<header id="hd"><div class="w hd">
+ <a href="#hero" aria-label="RiskMathics"><img src="rm-logo.png" alt="RiskMathics"></a>
+ <nav>
+  <a href="#programa">Programa</a>
+  <a href="#temario">Temario</a>
+  <a href="#quien">Para quien</a>
+  <a href="#faculty">Faculty</a>
+  <a href="#rm-enroll" class="cta">Inscribirme</a>
+ </nav>
+</div></header>
 
-<section class="sec"><div class="wrap">
- <p class="quote">&ldquo;Learn. Apply. Profit.&rdquo;<small>RiskMathics Financial Institute</small></p>
-</div></section>
-<section class="sec"><div class="wrap abs">
- <div class="kicker">El programa</div><h2 class="sec-title">De qu&eacute; va.</h2>
-<p>En treinta anos los mercados de derivados pasaron de los gritos en el piso del CME a la hiperautomatizacion de algoritmos en microsegundos. En 2024 el volumen global alcanzo 206 mil millones de contratos, dominado por derivados de tasas, divisas y energia. Los derivados dejaron de ser un instrumento de nicho: son el sistema nervioso de los mercados financieros.</p><p>Durante decadas, solo bancos, hedge funds y mesas privilegiadas accedian a coberturas complejas, spreads avanzados y tacticas sobre tasas, divisas y commodities. Este curso abre ese conocimiento y lo hace operativo. No ensena unicamente a operar futuros u opciones: revela <b>como se construyen los precios, como se gestiona el riesgo de portafolio y como se estructura la cobertura correcta segun la exposicion real</b> de cada empresa o mandato.</p><p>Es tambien un curso de proteccion contra el trading amateur. Frente a los mitos del retail y las promesas de apalancamiento sin gestion, aqui se trabaja con disciplina de riesgo. Y por primera vez, las empresas medianas acceden a herramientas reales para proteger costos, margenes y flujo de caja ante la volatilidad de tasas, tipo de cambio y materias primas.</p>
-<h2 class="sec-title">10 razones para tomarlo.</h2>
- <div class="hl"><div class="h"><b>01</b><span>8 clases y 16 horas en Virtual Live por Zoom, de 18:00 a 20:00 hora de la Ciudad de Mexico</span></div><div class="h"><b>02</b><span>Otorga 29 HECSE de educacion continua para actuarios certificados, avalados por el Colegio Nacional de Actuarios</span></div><div class="h"><b>03</b><span>Historia global de los derivados de 1990 a 2024: de los pits a la nube, y como Long Term Capital, Lehman y Archegos redibujaron la regulacion</span></div><div class="h"><b>04</b><span>Futuros y forwards a fondo: pricing, base, convergencia y estructura de contratos, con casos reales en maiz, gasolina, tasas y divisas</span></div><div class="h"><b>05</b><span>Swaps y estructuras OTC: IRS, CCS, basis y asset swaps, con ejercicio practico de TIIE contra SOFR</span></div><div class="h"><b>06</b><span>Como construir una politica corporativa de uso de derivados, con simulacion de tesoreria: errores tipicos y buenas practicas</span></div><div class="h"><b>07</b><span>Opciones financieras con rigor: griegas, payoff y sensibilidad, y cuando conviene un futuro y cuando un forward</span></div><div class="h"><b>08</b><span>Estrategias de volatilidad: straddle, strangle, spread vertical, butterfly y condors, y cobertura de portafolios con VIX y MOVE</span></div><div class="h"><b>09</b><span>Simulacion integral de portafolio institucional sobre TIIE, USD/MXN y crudo, con casos de crisis cambiaria y estrategias pre-FED</span></div><div class="h"><b>10</b><span>Imparte Juan Pedro Luengas Garcia, Senior Vice President de TPAC Capital y Pack Creek</span></div></div>
-</div></section>
-<section class="sec"><div class="wrap">
- <div class="kicker">Dirigido a</div><h2 class="sec-title">Para qui&eacute;n es.</h2>
- <ul class="dir"><li>Tesorerias, CFOs y areas de finanzas de empresas medianas y grandes</li><li>Areas de riesgo que disenan o supervisan politicas de cobertura</li><li>Instituciones financieras, asset managers y casas de bolsa</li><li>Fondos de pensiones y aseguradoras con exposicion a tasas y divisas</li><li>Analistas, estructuradores y traders que operan derivados a diario</li><li>Empresas con costos en dolares o insumos expuestos a materias primas</li><li>Startups con flujos internacionales o costos variables</li><li>Inversionistas individuales que quieren profesionalizar su operacion</li></ul>
+<section id="hero"><div class="w">
+ <div class="cat">Curso &middot; Derivados</div>
+ <h1><span class="a">Global Hedging</span><span class="b">&amp; Tactical Trading</span></h1>
+ <div class="edic">Institutional Risk &middot; Futures &amp; Options</div>
+ <hr class="line mid">
+ <p class="tag">Los derivados dejaron de ser un instrumento de nicho. Son el sistema nervioso de los mercados.</p>
+ <div class="meta">1 de septiembre de 2026 <i>&middot;</i> Virtual Live <i>&middot;</i> 18:00 a 20:00 CDMX</div>
+ <div class="rail">
+  <div><span>Formato</span><b>8 clases<br>16 horas</b></div>
+  <div><span>Modalidad</span><b>Virtual Live<br>por Zoom</b></div>
+  <div><span>Inversion</span><b>MXN $25,000<br>+ TAX</b></div>
+  <div><span>Acreditacion</span><b>29 HECSE<br>Colegio de Actuarios</b></div>
+ </div>
 </div></section>
 
-<section class="sec" id="temario"><div class="wrap">
- <div class="kicker">Temario</div><h2 class="sec-title">Qu&eacute; vas a dominar.</h2>
- <p class="sec-sub">8 clases Virtual Live por Zoom de 18:00 a 20:00, hora de la Ciudad de Mexico. Del 1 al 21 de septiembre de 2026. El curso se divide en dos partes: coberturas y estrategia corporativa, y trading institucional en futuros y opciones.</p>
- <ol class="temas"><li><b>Parte A &middot; Clase 1. Historia global de los derivados, 1990 a 2024</b> De los pits a la nube: evolucion de los mercados organizados. Las crisis que redibujaron el sistema: Long Term Capital, Lehman y Archegos, y su impacto regulatorio. El papel de Dodd-Frank, EMIR y las camaras de contrapartida central. Que es un mercado de derivados organizado y en que se distingue del OTC.</li><li><b>Parte A &middot; Clase 2. Futuros y forwards</b> Pricing, base, convergencia y estructura de contratos. Estrategias de cobertura para tasas, tipo de cambio y commodities. Casos en empresas reales: maiz, gasolina, tasas y divisas.</li><li><b>Parte A &middot; Clase 3. Swaps y estructuras OTC</b> IRS, cross currency swaps, basis y asset swaps. Aplicacion practica: swap para convertir deuda a tasa fija. Ejercicio de TIIE contra SOFR.</li><li><b>Parte A &middot; Clase 4. Cobertura empresarial y politica de derivados</b> Como se construye una politica corporativa de uso de derivados. Caso practico: importar componentes en dolares y vender en pesos. Simulacion de tesoreria con los errores tipicos y las buenas practicas.</li><li><b>Parte B &middot; Clase 5. Opciones financieras: call, put y volatilidad</b> Griegas, payoff y sensibilidad. Opciones sobre commodities. Diferencia real entre futuros y forwards, usos de cada uno, ventajas y desventajas.</li><li><b>Parte B &middot; Clase 6. Estrategias de volatilidad y trading avanzado</b> Straddle, strangle, spread vertical, butterfly y condors. Cobertura de portafolios con VIX y MOVE.</li><li><b>Parte B &middot; Clase 7. Simulacion integral de portafolio</b> Trading institucional sobre TIIE, USD/MXN y crudo. Construccion de la posicion y gestion del riesgo durante la simulacion.</li><li><b>Parte B &middot; Clase 8. Casos reales y cierre</b> Proteccion en crisis cambiaria, hedging de deuda y estrategias pre-FED. Revision de los entregables y de la politica de derivados construida durante el curso.</li></ol>
+<section class="alt" id="programa"><div class="w body rv">
+ <span class="eye">De que va</span>
+ <h2>El conocimiento que estaba reservado a las mesas</h2>
+ <hr class="line">
+ <p>En treinta anos los mercados de derivados pasaron de los gritos en el piso del CME a la
+  hiperautomatizacion de algoritmos en microsegundos. En 2024 el volumen global alcanzo 206 mil
+  millones de contratos, dominado por derivados de tasas, divisas y energia.</p>
+ <p>Durante decadas, solo bancos, hedge funds y mesas privilegiadas accedian a coberturas complejas,
+  spreads avanzados y tacticas sobre tasas, divisas y commodities. Este curso abre ese conocimiento
+  y lo vuelve operativo. No ensena unicamente a operar futuros u opciones: revela <b>como se
+  construyen los precios, como se gestiona el riesgo de portafolio y como se estructura la cobertura
+  correcta</b> segun la exposicion real de cada empresa o mandato.</p>
+ <p>Es tambien un curso de proteccion contra el trading amateur. Frente a los mitos del retail y las
+  promesas de apalancamiento sin gestion, aqui se trabaja con disciplina de riesgo. Y por primera
+  vez, las empresas medianas acceden a herramientas reales para proteger costos, margenes y flujo de
+  caja ante la volatilidad de tasas, tipo de cambio y materias primas.</p>
 </div></section>
-<section class="sec"><div class="wrap">
- <div class="kicker">Faculty</div><h2 class="sec-title">Qui&eacute;nes lo imparten.</h2>
- <div class="fac"><div class="fc"><div class="fn">Juan Pedro Luengas Garcia</div><div class="fr">Senior Vice President, TPAC Capital y Pack Creek</div><p>Lidera el desarrollo de soluciones financieras y estrategias de administracion de riesgos para empresas de los sectores agroindustrial, energetico y corporativo. Cuenta con mas de diez anos de experiencia en planeacion financiera, cobertura de materias primas, gestion de riesgos cambiarios y estructuracion de derivados financieros, incluyendo operaciones Over-the-Counter. Su trabajo se ha enfocado en ayudar a organizaciones expuestas a la volatilidad de precios a proteger margenes, estabilizar flujos de efectivo y fortalecer sus procesos de toma de decisiones. Anteriormente se desempeno en el sector publico federal como Director General de Politica de Comercializacion y Director de Pagos de Apoyos a la Comercializacion en ASERCA, donde participo en el diseno y operacion de politicas e instrumentos para la comercializacion y administracion de riesgos del sector agropecuario. Es Licenciado en Matematicas Aplicadas con formacion en Economia por el Instituto Tecnologico Autonomo de Mexico, y ha sido profesor de Macroeconomia Avanzada en la Universidad Panamericana.</p></div></div>
- </section>
 
-<section class="sec" id="prerrequisitos"><div class="wrap">
- <div class="kicker">Antes de inscribirte</div>
- <h2 class="sec-title">Qu&eacute; necesitas traer.</h2>
- <ul class="dir"><li>Bases solidas de matematicas financieras y mercados de dinero</li><li>Comprension del idioma ingles para materiales y terminologia</li><li>Familiaridad con Excel o alguna plataforma de trading</li><li>Deseable: experiencia con Bloomberg, R o Python</li><li>Ideal: experiencia operativa o academica en mercados financieros</li><li>Perfil de carreras economico administrativas o financieras</li></ul>
- <p class="sec-sub" style="margin-top:22px">El Colegio Nacional de Actuarios A.C. autoriza que este curso forme parte de las horas de educacion continua para actuarios certificados: otorga 29 HECSE, de las cuales 0 son de normatividad.</p>
-</div></section>
-<section class="sec"><div class="wrap">
- <div class="kicker">El programa</div><h2 class="sec-title">Ficha del programa.</h2>
- <p class="sec-sub">Regístrate y recibe el temario completo por correo; un asesor te contacta el mismo día.</p>
- <div class="ficha">
-   <div class="f"><div class="n">8</div><div class="l">Clases</div></div>
-   <div class="f"><div class="n">16</div><div class="l">Horas totales</div></div>
-   <div class="f"><div class="n">1 Sep</div><div class="l">Inicio</div></div>
-   <div class="f"><div class="n">MXN $25,000 + TAX</div><div class="l">Inversi&oacute;n</div></div>
+<section id="partes"><div class="w">
+ <div class="rv"><span class="eye">Arquitectura</span>
+  <h2>Dos mitades. Una disciplina.</h2></div>
+ <div class="parte rv">
+  <div class="letra">A</div>
+  <div>
+   <h3>Hedging, Risk Structures &amp; Corporate Strategy</h3>
+   <p>La cobertura vista desde la tesoreria: como se estructura, como se documenta y como se
+    gobierna. Historia de los derivados y de las crisis que redibujaron la regulacion, futuros y
+    forwards a fondo, swaps y estructuras OTC, y la construccion de una politica corporativa de uso
+    de derivados que resista una auditoria.</p>
   </div>
  </div>
-  <div class="f"><div class="n">16</div><div class="l">Horas totales</div></div>
-  <div class="f"><div class="n">1 Sep</div><div class="l">Inicio</div></div>
-  <div class="f"><div class="n">MXN $25,000 + TAX</div><div class="l">Inversi&oacute;n</div></div>
+ <div class="parte rv">
+  <div class="letra">B</div>
+  <div>
+   <h3>Trading &amp; Institutional Strategies in Futures &amp; Options</h3>
+   <p>La misma disciplina, del lado de la mesa. Opciones con rigor: griegas, payoff y sensibilidad.
+    Estrategias de volatilidad desde el straddle hasta los condors, cobertura de portafolios con VIX
+    y MOVE, y una simulacion integral sobre TIIE, USD/MXN y crudo con casos de crisis cambiaria y
+    estrategias pre-FED.</p>
+  </div>
  </div>
-</section>
+</div></section>
+<section class="alt" id="temario"><div class="w">
+ <div class="rv"><span class="eye">Temario</span>
+  <h2>Ocho clases. Dieciseis horas.</h2>
+  <p class="lede">Del 1 al 21 de septiembre de 2026, de 18:00 a 20:00 hora de la Ciudad de Mexico.</p>
+  <hr class="line"></div>
+ <div class="clases rv">
+  <div class="cl"><div class="n">01</div><div>
+   <h4>Historia global de los derivados, 1990 a 2024</h4>
+   <p>De los pits a la nube: evolucion de los mercados organizados. Las crisis que redibujaron el
+    sistema, Long Term Capital, Lehman y Archegos, y su impacto regulatorio. El papel de Dodd-Frank,
+    EMIR y las camaras de contrapartida central. Que es un mercado organizado y en que se distingue
+    del OTC.</p><span class="f">Parte A</span></div></div>
+  <div class="cl"><div class="n">02</div><div>
+   <h4>Futuros y forwards</h4>
+   <p>Pricing, base, convergencia y estructura de contratos. Estrategias de cobertura para tasas,
+    tipo de cambio y commodities. Casos en empresas reales: maiz, gasolina, tasas y divisas.</p>
+   <span class="f">Parte A</span></div></div>
+  <div class="cl"><div class="n">03</div><div>
+   <h4>Swaps y estructuras OTC</h4>
+   <p>IRS, cross currency swaps, basis y asset swaps. Aplicacion practica: swap para convertir deuda
+    a tasa fija. Ejercicio de TIIE contra SOFR.</p><span class="f">Parte A</span></div></div>
+  <div class="cl"><div class="n">04</div><div>
+   <h4>Cobertura empresarial y politica de derivados</h4>
+   <p>Como se construye una politica corporativa de uso de derivados. Caso practico: importar
+    componentes en dolares y vender en pesos. Simulacion de tesoreria con los errores tipicos y las
+    buenas practicas.</p><span class="f">Parte A</span></div></div>
+  <div class="cl"><div class="n">05</div><div>
+   <h4>Opciones financieras: call, put y volatilidad</h4>
+   <p>Griegas, payoff y sensibilidad. Opciones sobre commodities. Diferencia real entre futuros y
+    forwards, usos de cada uno, ventajas y desventajas.</p><span class="f">Parte B</span></div></div>
+  <div class="cl"><div class="n">06</div><div>
+   <h4>Estrategias de volatilidad y trading avanzado</h4>
+   <p>Straddle, strangle, spread vertical, butterfly y condors. Cobertura de portafolios con VIX y
+    MOVE.</p><span class="f">Parte B</span></div></div>
+  <div class="cl"><div class="n">07</div><div>
+   <h4>Simulacion integral de portafolio</h4>
+   <p>Trading institucional sobre TIIE, USD/MXN y crudo. Construccion de la posicion y gestion del
+    riesgo durante la simulacion.</p><span class="f">Parte B</span></div></div>
+  <div class="cl"><div class="n">08</div><div>
+   <h4>Casos reales y cierre</h4>
+   <p>Proteccion en crisis cambiaria, hedging de deuda y estrategias pre-FED. Revision de los
+    entregables y de la politica de derivados construida durante el curso.</p>
+   <span class="f">Parte B</span></div></div>
+ </div>
+</div></section>
 
+<section id="quien"><div class="w">
+ <div class="rv"><span class="eye">Para quien es</span>
+  <h2>Quien decide una cobertura, y quien la opera</h2><hr class="line"></div>
+ <ul class="dos rv">
+  <li>Tesorerias, CFOs y areas de finanzas de empresas medianas y grandes</li>
+  <li>Areas de riesgo que disenan o supervisan politicas de cobertura</li>
+  <li>Instituciones financieras, asset managers y casas de bolsa</li>
+  <li>Fondos de pensiones y aseguradoras con exposicion a tasas y divisas</li>
+  <li>Analistas, estructuradores y traders que operan derivados a diario</li>
+  <li>Empresas con costos en dolares o insumos expuestos a materias primas</li>
+  <li>Startups con flujos internacionales o costos variables</li>
+  <li>Inversionistas individuales que quieren profesionalizar su operacion</li>
+ </ul>
+</div></section>
+<section class="alt" id="requisitos"><div class="w">
+ <div class="rv"><span class="eye">Antes de inscribirte</span>
+  <h2>Que necesitas traer</h2><hr class="line"></div>
+ <ul class="dos rv">
+  <li>Bases solidas de matematicas financieras y mercados de dinero</li>
+  <li>Comprension del idioma ingles para materiales y terminologia</li>
+  <li>Familiaridad con Excel o alguna plataforma de trading</li>
+  <li>Deseable: experiencia con Bloomberg, R o Python</li>
+  <li>Ideal: experiencia operativa o academica en mercados financieros</li>
+  <li>Perfil de carreras economico administrativas o financieras</li>
+ </ul>
+ <div class="sello rv">
+  <div class="n">29</div>
+  <div class="l">HECSE</div>
+  <p>El Colegio Nacional de Actuarios A.C. autoriza que este curso forme parte de las horas de
+   educacion continua para actuarios certificados. De las 29 horas, 0 son de normatividad.</p>
+ </div>
+</div></section>
+
+<section id="faculty"><div class="w">
+ <div class="rv"><span class="eye">Faculty</span>
+  <h2>Quien lo imparte</h2></div>
+ <div class="fac rv">
+  <div class="fn">Juan Pedro Luengas Garcia</div>
+  <div class="fr">Senior Vice President &middot; TPAC Capital y Pack Creek</div>
+  <p>Lidera el desarrollo de soluciones financieras y estrategias de administracion de riesgos para
+   empresas de los sectores agroindustrial, energetico y corporativo. Cuenta con mas de diez anos de
+   experiencia en planeacion financiera, cobertura de materias primas, gestion de riesgos cambiarios
+   y estructuracion de derivados financieros, incluyendo operaciones Over-the-Counter. Su trabajo se
+   ha enfocado en ayudar a organizaciones expuestas a la volatilidad de precios a proteger margenes,
+   estabilizar flujos de efectivo y fortalecer sus procesos de toma de decisiones.</p>
+  <p>Anteriormente se desempeno en el sector publico federal como Director General de Politica de
+   Comercializacion y Director de Pagos de Apoyos a la Comercializacion en ASERCA, donde participo
+   en el diseno y operacion de politicas e instrumentos para la comercializacion y administracion de
+   riesgos del sector agropecuario.</p>
+  <p>Es Licenciado en Matematicas Aplicadas con formacion en Economia por el Instituto Tecnologico
+   Autonomo de Mexico, y ha sido profesor de Macroeconomia Avanzada en la Universidad
+   Panamericana.</p>
+ </div>
+</div></section>
+
+<section class="alt" id="ficha"><div class="w">
+ <div class="rv"><span class="eye">Ficha del programa</span>
+  <h2>Lo esencial, en una linea</h2><hr class="line"></div>
+ <div class="ficha rv">
+  <div><div class="n">8</div><div class="l">Clases</div></div>
+  <div><div class="n">16</div><div class="l">Horas totales</div></div>
+  <div><div class="n">1 Sep 2026</div><div class="l">Inicio</div></div>
+  <div><div class="n">MXN $25,000 + TAX</div><div class="l">Inversion</div></div>
+ </div>
+</div></section>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
 <style>
  #rm-enroll .iti{width:100%;}
  #rm-enroll .iti__selected-flag{background:transparent;padding-left:0;}
  #rm-enroll input,#rm-enroll select{outline:none;background:transparent;}
- #rm-enroll .rm-in{width:100%;border:none;border-bottom:1px solid #dfe5ee;border-radius:0;padding:9px 1px 10px;font-size:15px;font-family:'Lora',Georgia,serif;color:#1b2430;transition:border-color .18s;}
+ #rm-enroll .rm-in{width:100%;border:none;border-bottom:1px solid #12352B;border-radius:0;padding:9px 1px 10px;font-size:15px;font-family:'Lora',Georgia,serif;color:#FFFFFF;transition:border-color .18s;}
  #rm-enroll .rm-in:focus{border-bottom-color:#8f9bb0;}
  #rm-enroll .rm-in::placeholder{color:#b7c0cd;}
- #rm-enroll .rm-lb{display:block;font-family:'Poppins',Arial,sans-serif;font-size:10px;letter-spacing:1.6px;font-weight:500;color:#93A0B4;text-transform:uppercase;margin-bottom:2px;}
+ #rm-enroll .rm-lb{display:block;font-family:'Poppins',Arial,sans-serif;font-size:10px;letter-spacing:1.6px;font-weight:500;color:#5E8577;text-transform:uppercase;margin-bottom:2px;}
  #rm-enroll select.rm-in{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2393A0B4' stroke-width='1.4' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center;padding-right:20px;}
  @media (max-width:560px){#rm-enroll .rm-2col{grid-template-columns:1fr !important;}}
 </style>
-<section id="rm-enroll" style="background:linear-gradient(150deg,#101820,#000000);color:#fff;padding:88px 22px;font-family:'Poppins',Arial,sans-serif;">
+<section id="rm-enroll" style="background:linear-gradient(150deg,#101820,#000000);color:#0A1E19;padding:88px 22px;font-family:'Poppins',Arial,sans-serif;">
  <div style="max-width:600px;margin:0 auto;">
  <div style="text-align:center;margin-bottom:38px;">
  <div style="color:#C9A96A;letter-spacing:3px;font-size:10.5px;font-weight:500;">INSCRIPCIÓN · CUPO LIMITADO</div>
@@ -141,7 +360,7 @@ ul.dir{list-style:none;margin-top:24px}ul.dir li{padding:10px 0 10px 26px;positi
  <div style="width:50px;height:2px;background:#C9A96A;margin:18px auto;"></div>
  <p style="color:#c2cee0;font-size:15px;margin:0;font-family:'Lora',Georgia,serif;font-style:italic;">Déjanos tus datos, verifica tu correo y tu WhatsApp,<br>y recibe el temario completo. Sin compromiso.</p>
  </div>
- <div style="background:#ffffff;color:#1b2430;border-radius:6px;padding:44px 42px;border:1px solid rgba(255,255,255,.14);box-shadow:0 2px 24px rgba(0,0,0,.16);">
+ <div style="background:#0A1E19;color:#FFFFFF;border-radius:6px;padding:44px 42px;border:1px solid rgba(255,255,255,.14);box-shadow:0 2px 24px rgba(0,0,0,.16);">
  <form id="rm-lead" onsubmit="return rmSubmit(event)" style="display:grid;gap:22px;">
  <div><label class="rm-lb">Nombre(s)</label><input class="rm-in" name="nombre" required></div>
  <div class="rm-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:22px 20px;">
@@ -155,7 +374,7 @@ ul.dir{list-style:none;margin-top:24px}ul.dir li{padding:10px 0 10px 26px;positi
  <option value="grupo">Grupo o delegación</option>
  <option value="licencia_corporativa">Licencia / cohorte corporativa</option>
  </select>
- <small style="display:block;margin-top:7px;color:#93A0B4;font-family:'Lora',Georgia,serif;font-size:11.5px;">Para inscripción individual, empresa, puesto y sector son opcionales.</small>
+ <small style="display:block;margin-top:7px;color:#5E8577;font-family:'Lora',Georgia,serif;font-size:11.5px;">Para inscripción individual, empresa, puesto y sector son opcionales.</small>
  </div>
  <div><label class="rm-lb">Email corporativo o institucional</label><input class="rm-in" type="email" name="email" required></div>
  <div class="rm-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:22px 20px;">
@@ -209,25 +428,25 @@ ul.dir{list-style:none;margin-top:24px}ul.dir li{padding:10px 0 10px 26px;positi
  </div>
  <div><label class="rm-lb">WhatsApp (opcional)</label><input class="rm-in" id="rm-whatsapp" name="whatsapp" type="tel"></div>
  </div>
- <label style="display:flex;align-items:flex-start;gap:10px;font-size:11.5px;color:#5a6577;font-family:'Lora',Georgia,serif;line-height:1.55;cursor:pointer;margin-top:2px;">
- <input type="checkbox" name="privacidad" required style="margin-top:2px;width:14px;height:14px;flex:none;cursor:pointer;accent-color:#1b2430;">
- <span>He leído y acepto el <a href="https://riskmathics.com/avisoprivacidad" target="_blank" rel="noopener" style="color:#1b2430;font-weight:600;text-decoration:underline;text-underline-offset:2px;">Aviso de Privacidad</a> y autorizo el tratamiento de mis datos y ser contactado por RiskMathics.</span>
+ <label style="display:flex;align-items:flex-start;gap:10px;font-size:11.5px;color:#8FB5A6;font-family:'Lora',Georgia,serif;line-height:1.55;cursor:pointer;margin-top:2px;">
+ <input type="checkbox" name="privacidad" required style="margin-top:2px;width:14px;height:14px;flex:none;cursor:pointer;accent-color:#FFFFFF;">
+ <span>He leído y acepto el <a href="https://riskmathics.com/avisoprivacidad" target="_blank" rel="noopener" style="color:#FFFFFF;font-weight:600;text-decoration:underline;text-underline-offset:2px;">Aviso de Privacidad</a> y autorizo el tratamiento de mis datos y ser contactado por RiskMathics.</span>
  </label>
- <button type="submit" style="background:#7A5C2E;color:#ffffff;font-weight:600;font-size:13px;letter-spacing:1.8px;text-transform:uppercase;border:none;padding:17px;border-radius:4px;cursor:pointer;font-family:'Poppins',Arial,sans-serif;margin-top:4px;">Quiero el temario</button>
- <p style="font-size:10.5px;color:#9aa4b4;margin:0;text-align:center;font-family:'Poppins',Arial,sans-serif;letter-spacing:.4px;">Verificamos tu correo y tu teléfono con un código · Datos protegidos</p>
+ <button type="submit" style="background:#32D2A0;color:#0A1E19;font-weight:600;font-size:13px;letter-spacing:1.8px;text-transform:uppercase;border:none;padding:17px;border-radius:4px;cursor:pointer;font-family:'Poppins',Arial,sans-serif;margin-top:4px;">Quiero el temario</button>
+ <p style="font-size:10.5px;color:#5E8577;margin:0;text-align:center;font-family:'Poppins',Arial,sans-serif;letter-spacing:.4px;">Verificamos tu correo y tu teléfono con un código · Datos protegidos</p>
  </form>
  <div id="rm-verify" style="display:none;"></div>
  <div id="rm-thanks" style="display:none;border:1px solid #b7e4c7;background:#f6fdf9;color:#1b4332;padding:22px;border-radius:6px;font-size:14.5px;font-family:'Lora',Georgia,serif;line-height:1.6;"><b>Listo.</b> Recibimos y verificamos tu correo. Te enviamos el temario a tu correo y un asesor te contactará.</div>
  <div style="margin-top:34px;padding-top:28px;border-top:1px solid #edf0f5;text-align:center;">
- <div style="font-size:10px;color:#93A0B4;letter-spacing:2.2px;font-family:'Poppins',Arial,sans-serif;">O INSCRÍBETE Y PAGA DIRECTO</div>
- <div style="font-size:30px;font-weight:300;color:#7A5C2E;margin:14px 0 2px;font-family:'Poppins',Arial,sans-serif;letter-spacing:.5px;">MXN $25,000 <span style="font-size:15px;font-weight:400;color:#9aa4b4;letter-spacing:.5px;">+ TAX</span></div>
- <div style="font-size:11px;color:#9aa4b4;font-family:'Lora',Georgia,serif;font-style:italic;margin-bottom:18px;">MXN $25,000 · 4 sesiones · 8 horas</div>
+ <div style="font-size:10px;color:#5E8577;letter-spacing:2.2px;font-family:'Poppins',Arial,sans-serif;">O INSCRÍBETE Y PAGA DIRECTO</div>
+ <div style="font-size:30px;font-weight:300;color:#32D2A0;margin:14px 0 2px;font-family:'Poppins',Arial,sans-serif;letter-spacing:.5px;">MXN $25,000 <span style="font-size:15px;font-weight:400;color:#5E8577;letter-spacing:.5px;">+ TAX</span></div>
+ <div style="font-size:11px;color:#5E8577;font-family:'Lora',Georgia,serif;font-style:italic;margin-bottom:18px;">MXN $25,000 · 4 sesiones · 8 horas</div>
  <div style="display:grid;gap:10px;">
- <a id="rm-paypal" href="https://bffdsgvgcvmojobfiuay.supabase.co/functions/v1/paypal-pay?curso=globalhedging" target="_blank" rel="noopener" style="background:#7A5C2E;color:#ffffff;font-weight:600;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;padding:15px;border-radius:4px;text-decoration:none;white-space:nowrap;font-family:'Poppins',Arial,sans-serif;">Pagar con PayPal</a>
- <a id="rm-stripe" href="https://buy.stripe.com/5kQbIT8nt2es2ghfrz2RA0T" target="_blank" rel="noopener" style="background:transparent;border:1.5px solid #7A5C2E;color:#7A5C2E;font-weight:600;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;padding:14px;border-radius:4px;text-decoration:none;white-space:nowrap;font-family:'Poppins',Arial,sans-serif;">Pagar con tarjeta · Stripe</a>
+ <a id="rm-paypal" href="https://bffdsgvgcvmojobfiuay.supabase.co/functions/v1/paypal-pay?curso=globalhedging" target="_blank" rel="noopener" style="background:#32D2A0;color:#0A1E19;font-weight:600;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;padding:15px;border-radius:4px;text-decoration:none;white-space:nowrap;font-family:'Poppins',Arial,sans-serif;">Pagar con PayPal</a>
+ <a id="rm-stripe" href="https://buy.stripe.com/5kQbIT8nt2es2ghfrz2RA0T" target="_blank" rel="noopener" style="background:transparent;border:1.5px solid #32D2A0;color:#32D2A0;font-weight:600;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;padding:14px;border-radius:4px;text-decoration:none;white-space:nowrap;font-family:'Poppins',Arial,sans-serif;">Pagar con tarjeta · Stripe</a>
  </div>
  <p style="font-size:11px;color:#8fa2b8;margin-top:14px;font-family:'Lora',Georgia,serif;font-style:italic;">M&aacute;s de 100,000 profesionales formados en 25 a&ntilde;os &middot; BANXICO, CNBV, AFOREs y la banca de LATAM</p>
-<p style="font-size:10.5px;color:#9aa4b4;margin-top:6px;font-family:'Poppins',Arial,sans-serif;letter-spacing:.4px;">Meses sin intereses disponibles con PayPal</p>
+<p style="font-size:10.5px;color:#5E8577;margin-top:6px;font-family:'Poppins',Arial,sans-serif;letter-spacing:.4px;">Meses sin intereses disponibles con PayPal</p>
 <p style="font-size:10px;color:#b3bcc9;margin-top:16px;font-family:'Poppins',Arial,sans-serif;letter-spacing:.5px;">100% seguro · SSL · PayPal Verified · RiskMathics Financial Institute</p>
  </div>
  </div>
@@ -259,22 +478,22 @@ if(res&&res.ok){f.style.display="none";rmShowCode(d.email);}
 else{b.textContent=txt;b.disabled=false;alert((res&&res.error)||"No pudimos enviar el codigo. Escribenos a growth@riskmathics.com");}
 return false;}
 function rmCorporativo(c){var box=document.getElementById('rm-verify');
-box.innerHTML='<div style="border:1px solid #f0d9a8;background:#fffaf0;padding:22px;border-radius:6px;">'+
-'<p style="margin:0 0 14px;font-size:15px;color:#1b2430;font-family:\'Lora\',Georgia,serif;line-height:1.6;">Para enviarte el temario necesitamos tu <b>correo institucional o de empresa</b>.</p>'+
-'<p style="margin:0 0 18px;font-size:14px;color:#5a6577;font-family:\'Lora\',Georgia,serif;line-height:1.6;">Si no cuentas con uno, escribenos y con gusto te atendemos:</p>'+
+box.innerHTML='<div style="border:1px solid #f0d9a8;background:#0A1E19;padding:22px;border-radius:6px;">'+
+'<p style="margin:0 0 14px;font-size:15px;color:#FFFFFF;font-family:\'Lora\',Georgia,serif;line-height:1.6;">Para enviarte el temario necesitamos tu <b>correo institucional o de empresa</b>.</p>'+
+'<p style="margin:0 0 18px;font-size:14px;color:#8FB5A6;font-family:\'Lora\',Georgia,serif;line-height:1.6;">Si no cuentas con uno, escribenos y con gusto te atendemos:</p>'+
 '<div style="display:grid;gap:10px;">'+
-'<a href="'+(c.whatsapp||"https://wa.me/525579894034")+'" target="_blank" rel="noopener" style="background:#25D366;color:#fff;font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:14px;border-radius:4px;text-decoration:none;text-align:center;font-family:\'Poppins\',Arial,sans-serif;">Escribenos por WhatsApp</a>'+
-'<a href="tel:'+(c.telefono||"+525579894034").replace(/\s/g,"")+'" style="border:1.5px solid #1b2430;color:#1b2430;font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:13px;border-radius:4px;text-decoration:none;text-align:center;font-family:\'Poppins\',Arial,sans-serif;">Llamar '+(c.whatsapp_texto||"+52 55 7989 4034")+'</a>'+
-'<a href="mailto:'+(c.correo||"growth@riskmathics.com")+'?subject=Informes%20'+encodeURIComponent(RM_CFG.id)+'" style="border:1.5px solid #dfe5ee;color:#5a6577;font-weight:600;font-size:12.5px;letter-spacing:1px;text-transform:uppercase;padding:13px;border-radius:4px;text-decoration:none;text-align:center;font-family:\'Poppins\',Arial,sans-serif;">'+(c.correo||"growth@riskmathics.com")+'</a>'+
-'</div><p style="margin:16px 0 0;font-size:12px;color:#9aa4b4;font-family:\'Lora\',Georgia,serif;font-style:italic;text-align:center;">O corrige tu correo arriba e intenta de nuevo.</p></div>';
+'<a href="'+(c.whatsapp||"https://wa.me/525579894034")+'" target="_blank" rel="noopener" style="background:#25D366;color:#0A1E19;font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:14px;border-radius:4px;text-decoration:none;text-align:center;font-family:\'Poppins\',Arial,sans-serif;">Escribenos por WhatsApp</a>'+
+'<a href="tel:'+(c.telefono||"+525579894034").replace(/\s/g,"")+'" style="border:1.5px solid #FFFFFF;color:#FFFFFF;font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:13px;border-radius:4px;text-decoration:none;text-align:center;font-family:\'Poppins\',Arial,sans-serif;">Llamar '+(c.whatsapp_texto||"+52 55 7989 4034")+'</a>'+
+'<a href="mailto:'+(c.correo||"growth@riskmathics.com")+'?subject=Informes%20'+encodeURIComponent(RM_CFG.id)+'" style="border:1.5px solid #12352B;color:#8FB5A6;font-weight:600;font-size:12.5px;letter-spacing:1px;text-transform:uppercase;padding:13px;border-radius:4px;text-decoration:none;text-align:center;font-family:\'Poppins\',Arial,sans-serif;">'+(c.correo||"growth@riskmathics.com")+'</a>'+
+'</div><p style="margin:16px 0 0;font-size:12px;color:#5E8577;font-family:\'Lora\',Georgia,serif;font-style:italic;text-align:center;">O corrige tu correo arriba e intenta de nuevo.</p></div>';
 box.style.display="block";box.scrollIntoView({behavior:"smooth",block:"center"});}
 function rmShowCode(email){var c=document.getElementById('rm-verify');
-c.innerHTML='<p style="margin:0 0 20px;font-size:14.5px;color:#1b2430;font-family:\'Lora\',Georgia,serif;line-height:1.6;">Te enviamos un <b>codigo</b> a <b>'+email+'</b>. Escribelo aqui para recibir tu temario:</p>'+
-'<div style="margin-bottom:24px;"><label style="display:block;font-family:\'Poppins\',Arial,sans-serif;font-size:10px;letter-spacing:1.6px;font-weight:500;color:#93A0B4;text-transform:uppercase;margin-bottom:4px;">Codigo de 6 digitos</label>'+
-'<input id="rm-otp-email" inputmode="numeric" maxlength="6" style="width:100%;border:none;border-bottom:1px solid #dfe5ee;padding:9px 1px 10px;font-size:22px;letter-spacing:8px;font-family:\'Poppins\',Arial,sans-serif;color:#1b2430;outline:none;"></div>'+
-'<button type="button" onclick="rmVerify()" style="width:100%;background:#0a1f3c;color:#ffffff;font-weight:600;font-size:13px;letter-spacing:1.8px;text-transform:uppercase;border:none;padding:16px;border-radius:4px;cursor:pointer;font-family:\'Poppins\',Arial,sans-serif;">Verificar y recibir temario</button>'+
-'<p id="rm-vmsg" style="font-size:11.5px;color:#9aa4b4;margin-top:10px;font-family:\'Lora\',Georgia,serif;"></p>'+
-'<p style="font-size:11.5px;color:#9aa4b4;margin-top:14px;font-family:\'Lora\',Georgia,serif;">No te llego? Revisa tu bandeja de no deseados o escribenos a <a href="mailto:growth@riskmathics.com" style="color:#0a1f3c;">growth@riskmathics.com</a></p>';
+c.innerHTML='<p style="margin:0 0 20px;font-size:14.5px;color:#FFFFFF;font-family:\'Lora\',Georgia,serif;line-height:1.6;">Te enviamos un <b>codigo</b> a <b>'+email+'</b>. Escribelo aqui para recibir tu temario:</p>'+
+'<div style="margin-bottom:24px;"><label style="display:block;font-family:\'Poppins\',Arial,sans-serif;font-size:10px;letter-spacing:1.6px;font-weight:500;color:#5E8577;text-transform:uppercase;margin-bottom:4px;">Codigo de 6 digitos</label>'+
+'<input id="rm-otp-email" inputmode="numeric" maxlength="6" style="width:100%;border:none;border-bottom:1px solid #12352B;padding:9px 1px 10px;font-size:22px;letter-spacing:8px;font-family:\'Poppins\',Arial,sans-serif;color:#FFFFFF;outline:none;"></div>'+
+'<button type="button" onclick="rmVerify()" style="width:100%;background:#32D2A0;color:#040E0C;font-weight:600;font-size:13px;letter-spacing:1.8px;text-transform:uppercase;border:none;padding:16px;border-radius:4px;cursor:pointer;font-family:\'Poppins\',Arial,sans-serif;">Verificar y recibir temario</button>'+
+'<p id="rm-vmsg" style="font-size:11.5px;color:#5E8577;margin-top:10px;font-family:\'Lora\',Georgia,serif;"></p>'+
+'<p style="font-size:11.5px;color:#5E8577;margin-top:14px;font-family:\'Lora\',Georgia,serif;">No te llego? Revisa tu bandeja de no deseados o escribenos a <a href="mailto:growth@riskmathics.com" style="color:#32D2A0;">growth@riskmathics.com</a></p>';
 c.style.display="block";var i=document.getElementById('rm-otp-email');if(i)i.focus();}
 async function rmVerify(){var ecode=(document.getElementById('rm-otp-email').value||"").trim();var m=document.getElementById('rm-vmsg');
 if(ecode.length<4){m.textContent="Escribe el codigo que te enviamos por correo.";return;}
@@ -292,4 +511,22 @@ Informes: <a href="mailto:growth@riskmathics.com">growth@riskmathics.com</a> &mi
 &copy; 2026 RiskMathics Financial Institute &middot; Learn. Apply. Profit.<span id="rm-social" style="display:block;margin-top:6px"><a href="https://www.linkedin.com/in/riskmathicsfi/" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="https://x.com/RiskMathicsFI" target="_blank" rel="noopener">X</a> &middot; <a href="https://www.youtube.com/@RiskMathicsFI" target="_blank" rel="noopener">YouTube</a> &middot; <a href="https://www.instagram.com/riskmathics_financial/" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.facebook.com/riskmathicsfi/" target="_blank" rel="noopener">Facebook</a> &middot; <a href="https://www.strava.com/clubs/955042" target="_blank" rel="noopener">Strava</a></span>
 </footer>
 <!--RM-CORNER-LOGO--><style>#rmcl{position:fixed;top:10px;left:14px;z-index:99998;line-height:0}#rmcl img{height:30px;width:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}@media(max-width:900px){#rmcl{display:none}}</style><a id="rmcl" href="https://riskmathics.com" target="_blank" rel="noopener" aria-label="RiskMathics"><img src="rm-logo.png" alt="RiskMathics"></a>
-</body></html>
+
+<footer style="background:#040E0C;border-top:1px solid #12352B;padding:44px 0 38px">
+ <div class="w" style="display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center">
+  <img src="rm-logo.png" alt="RiskMathics" style="height:30px">
+  <span style="font-family:'Poppins',Arial,sans-serif;font-size:11px;font-weight:300;letter-spacing:2.6px;text-transform:uppercase;color:#5E8577">RiskMathics Financial Institute</span>
+ </div>
+</footer>
+<script>
+var HD=document.getElementById('hd');
+addEventListener('scroll',function(){HD.classList.toggle('on',scrollY>40)},{passive:true});
+if('IntersectionObserver' in window){
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},
+  {rootMargin:'0px 0px -8% 0px',threshold:.06});
+ document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+}else{document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')})}
+</script>
+</body>
+</html>
